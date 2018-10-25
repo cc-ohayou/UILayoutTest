@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayOutActivity">
+
+    <Button
+        android:id="@+id/but05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but05"
+        android:layout_centerInParent="true"
+        />
+
+    <!-- 四个角落和中心的定位 当然这是相对于腹肌容器来讲
+
+     相对组件进行定位 则如下示例
+     -->
+
+<!--  左上角-->
+    <Button
+            android:id="@+id/but01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="but01"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            />
+    <Button
+        android:id="@+id/but001"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but001"
+        android:layout_above="@id/but05"
+        android:layout_toLeftOf="@id/but05"
+        />
+
+<!--右上角  -->
+    <Button
+        android:id="@+id/but002"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but002"
+        android:layout_above="@id/but05"
+        android:layout_toRightOf="@id/but05"
+        />
+        <Button
+            android:id="@+id/but02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="but02"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+
+            />
+    <!--  左下角-->
+        <Button
+            android:id="@+id/but03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="but03"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+
+            />
+    <Button
+        android:id="@+id/but003"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but002"
+        android:layout_below="@id/but05"
+        android:layout_toLeftOf="@id/but05"
+        />
+    <!--  右下角-->
+        <Button
+            android:id="@+id/but04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="but04"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            />
+    <Button
+        android:id="@+id/but004"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but004"
+        android:layout_below="@id/but05"
+        android:layout_toRightOf="@id/but05"
+        />
+
+    </RelativeLayout>

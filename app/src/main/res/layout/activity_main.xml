@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+    <!-- 注意线性布局 orientation 属性 垂直布局时 子元素高度不要使用match_parent
+    否则会填充整个屏幕
+    同样  水平布局时宽度不要使用match_parent 否则说明方向会覆盖其他组件-->
+
+    <!--  android:layout_gravity 指定组件在布局中的对其方式
+    android:gravity  指定文字在组件中的对其放手
+    但需要注意的是
+    排列方向是水平时 ，只有垂直方向上的对齐才起效
+    同理排列方向是垂直时 ，只有水平方向上的对齐才起效
+    -->
+    <!--<Button
+        android:id="@+id/but01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but01"
+        android:layout_gravity="top"
+        />
+    <Button
+        android:id="@+id/but02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but02"
+        android:layout_gravity="center"
+
+        />
+    <Button
+        android:id="@+id/but03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but03"
+        android:layout_gravity="bottom"
+
+        />
+    <Button
+        android:id="@+id/but04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="but04"
+        android:layout_gravity="center_vertical"
+
+        />-->
+
+    <!--  android:layout_weight属性 顾名思义 比重 根据布局和比重不同组件占据屏幕比例不同 -->
+   <EditText
+       android:id="@+id/input_01"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_weight="2"
+       android:hint="just type something ^_^"
+       />
+    <!--       设置button  android:layout_weight="1" 按钮和输入框各占一半的比例
+
+ --><!--
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="send"
+        />-->
+
+<!--  不设置button  android:layout_weight="1" 设置width为wrap_content
+     按钮会根据内容调整大小 剩余的空间则会由输入框quanbuzhanyong
+     此种布局方式 适配性强 看起来也更加舒服
+   -->
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send"
+        />
+</LinearLayout>
