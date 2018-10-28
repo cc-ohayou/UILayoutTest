@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PercentLayoutActivity">
+
+    <Button
+        android:id="@+id/perBut01"
+        android:text="perBut01"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%"
+        />
+    <Button
+        android:id="@+id/perBut02"
+        android:text="perBut02"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%"
+        />
+    <Button
+        android:id="@+id/perBut03"
+        android:text="perBut03"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%"
+        />
+    <Button
+        android:id="@+id/perBut04"
+        android:text="perBut04"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%"
+        />
+</android.support.percent.PercentRelativeLayout>

@@ -10,8 +10,8 @@
     否则会填充整个屏幕
     同样  水平布局时宽度不要使用match_parent 否则说明方向会覆盖其他组件-->
 
-    <!--  android:layout_gravity 指定组件在布局中的对其方式
-    android:gravity  指定文字在组件中的对其放手
+    <!--  android:layout_gravity 指定组件在布局中的对齐方式
+    android:gravity  指定文字在组件中的对齐方式
     但需要注意的是
     排列方向是水平时 ，只有垂直方向上的对齐才起效
     同理排列方向是垂直时 ，只有水平方向上的对齐才起效

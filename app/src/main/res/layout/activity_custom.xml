@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomActivity">
+
+    <!--<include layout="@layout/title"/>-->
+
+    <!-- 通过引入时间编写好的自定义标题布局  （标题布局自我实现布局中的按钮事件
+    避免了在引入布局处编写重复代码的问题） -->
+   <space.cc.com.uilayouttest.TitleLayout
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       />
+</LinearLayout>
