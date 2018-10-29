@@ -31,11 +31,14 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".PercentLayoutActivity"></activity>
-        <activity android:name=".CustomActivity">
+        <activity android:name=".PercentLayoutActivity" />
+        <activity android:name=".CustomActivity"></activity>
+        <activity android:name=".ListViewActivity">
 
         </activity>
-        <activity android:name=".ListViewActivity">
+        <activity android:name=".RecycleViewActivity"
+            android:label="recyclerView"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,8 +7,10 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,12 +35,25 @@ public class ListViewActivity extends AppCompatActivity {
         );*/
        //初始化水果数据
         initFruits();
-        FruitAdapter fruitAdapter=new FruitAdapter(ListViewActivity.this,
-                R.layout.fruit_item,fruits);
-        ListView listView=findViewById(R.id.list_view_01);
-        int standardHeight =getViewIemHeight();
+        FruitAdapter fruitAdapter = new FruitAdapter(ListViewActivity.this,
+                R.layout.fruit_item, fruits);
+        ListView listView = findViewById(R.id.list_view_01);
+        int standardHeight = getViewIemHeight();
         fruitAdapter.setHeight(standardHeight);
         listView.setAdapter(fruitAdapter);
+        //为每个item添加点击事件 点击显示当前item内部数据信息 此处是水果名称
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+          public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+             //获取当前位置的item的fruit信息
+             Fruit fruit=fruits.get(position);
+             Toast.makeText(ListViewActivity.this,
+                     fruit.getName(), Toast.LENGTH_SHORT).show();
+            }
+            }
+
+        );
+
     }
 
     private int getViewIemHeight( ) {
