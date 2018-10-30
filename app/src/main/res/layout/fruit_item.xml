@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="5dp"
     >
 
-    <ImageView
+    <!--
+    正常的水平布局配置
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"-->
+
+   <!-- <ImageView
         android:id="@+id/fruit_image"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         />
-    <!---->
+    &lt;!&ndash;&ndash;&gt;
 
 
 
@@ -22,5 +29,31 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_weight="1"
+        />-->
+
+<!-- 将图片 文字都设置为水平居中 layout_marginTop使文字和图片保持一定间距 垂直排列布局下 -->
+    <ImageView
+        android:id="@+id/fruit_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="3"
+
         />
+    <!--        android:layout_weight="3"
+-->
+
+
+
+    <TextView
+        android:id="@+id/fruit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        />
+    <!--android:layout_gravity="center_horizontal"-->
+
+
 </LinearLayout>
