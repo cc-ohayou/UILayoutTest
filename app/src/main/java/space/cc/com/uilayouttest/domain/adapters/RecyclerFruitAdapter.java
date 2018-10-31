@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -21,11 +22,13 @@ public class RecyclerFruitAdapter extends RecyclerView.Adapter<RecyclerFruitAdap
     private List<Fruit> fruitList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
+        View fruitView;
         ImageView fruitImage;
         TextView fruitName;
 
        public ViewHolder(@NonNull View itemView) {
            super(itemView);
+           fruitView=itemView;
            fruitImage= itemView.findViewById(R.id.fruit_image);
            fruitName= itemView.findViewById(R.id.fruit_name);
        }
@@ -80,8 +83,27 @@ public class RecyclerFruitAdapter extends RecyclerView.Adapter<RecyclerFruitAdap
             linearParams.width=width;
         }
         view.setLayoutParams(linearParams);
-       ViewHolder holder=new ViewHolder(view);
+       final ViewHolder holder=new ViewHolder(view);
+        holder.fruitView.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                int position=holder.getAdapterPosition();
+                Fruit fruit=fruitList.get(position);
+                Toast.makeText(v.getContext(),"clicked  view "+fruit.getName()
+                ,Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.fruitImage.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                int position=holder.getAdapterPosition();
+                Fruit fruit=fruitList.get(position);
+                Toast.makeText(v.getContext(),"clicked  image "+fruit.getName()
+                        ,Toast.LENGTH_SHORT).show();
+            }
+        });
        return holder;
     }
 
